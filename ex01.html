@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing:border;margin:0;padding:0;}
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .wrap{
+           width:1000px;
+           margin:0 auto;
+           background-color:lightblue;           
+        }
+        header{
+            background-color:red;
+            width:200px;
+            float:left;
+            /* display:inline-block; */
+        }
+        section{
+            background-color:green;
+            width:600px;
+            float:left;
+            /* display:inline-block; */
+        }
+        footer{
+            background-color:blue;
+            width:200px;
+            float:left;
+            /* display:inline-block; */
+        }
+    </style>
+
+</head>
+<body>
+    <section class="wrap clearfix">
+        <header>HEADER</header>
+        <section>SECTION</section>
+        <footer>FOOTER</footer>
+    </section>
+</body>
+</html>

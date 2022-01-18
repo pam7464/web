@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        ul,ol,li{
+            list-style:none;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-size:1em;
+            font-weight:400;
+        }
+
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .container{
+            margin:0 16px;            
+        }
+        .wrap{
+            width:100vw;
+            overflow:hidden;
+        }
+        .wrap>*{
+            padding:9.5px 0;
+        }
+        
+        .header h1{
+            float:left;           
+        }
+        .header nav{
+            float:right;
+        }
+        .header nav li{
+            float:left;
+            margin-left:10px;
+        }
+        .slider{
+            padding:0 !important;
+        }
+        .slider .container{
+            margin:0;
+        }
+
+        .my-info{
+        }
+        .my-photos{
+        }
+        .footer{
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <div class="container clearfix">
+                <h1>hong profile</h1>
+                <nav>
+                    <ul class="clearfix">
+                        <li>about</li>
+                        <li>hidtory</li>
+                        <li>photo</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="section sec01 slider">
+            <div class="container">
+                <div class="img-box">이미지</div>
+            </div>
+        </section>
+        <section class="section sec02 my-info">
+            <div class="container">
+                <h2>나는!?</h2>
+            </div>
+        </section>
+        <section class="section sec03 my-photos">
+            <div class="container">
+                내사진
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                footer
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

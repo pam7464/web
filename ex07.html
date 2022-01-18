@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0}
+        .clearfix::after{content:'';display:block;clear:both;}
+        div{
+            position:fixed;
+
+            width:200px;
+            height:200px;
+        }
+        .box01{
+            left:400px;
+            top:200px;
+            z-index:100;
+            background-color:red;
+        }
+        .box02{
+            left:400px;
+            top:400px;
+            z-index:50;
+            background-color:green;
+        }
+        .box03{
+            left:400px;
+            top:600px;
+            z-index:1000;
+            background-color:blue;
+        }
+        .box03::before,.box03::after{
+            content:'';
+            display:block;
+            width:50px;
+            height:50px;
+            position:fixed;
+            background-color:cyan;
+        }
+        .box03>*{
+            width:50px;
+            height:50px;
+            position:fixed;
+            background-color:cyan;
+        }
+        .box03::before{left:0;top:0;}
+        .box03 .box03-1{right:0;top:0;}
+        .box03 .box03-2{right:0;bottom:0;}
+        .box03::after{left:0;bottom:0;}
+
+        .box03-1-1{
+            position:absolute;
+            left:0;
+            top:0;
+            width:20px;
+            height:20px;
+            background-color:red;
+        }
+        .box03-1-2{
+            position:absolute;
+            right:0;
+            bottom:0;
+            width:20px;
+            height:20px;
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box01"></div>
+    <div class="box02"></div>
+    <div class="box03">
+        <div class="box03-1">
+            <div class="box03-1-1"></div>
+            <div class="box03-1-2"></div>
+        </div>
+        <div class="box03-2"></div>
+    </div>
+</body>
+</html>

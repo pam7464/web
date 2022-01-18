@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        img{width:100%;vertical-align:top;}
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .photos{
+            width:410px;
+            margin:0 auto;
+            padding:2px;
+            background-color:rgba(0,0,0,1);
+        }
+        .img-box{
+            width:100px;
+            margin-right:2px;
+            float:left;
+            overflow:hidden;
+        }
+        .img-box:hover{
+            transform:translateX(-10px);
+        }
+        .photo04,.photo08{
+            margin-right:0;
+        }
+        .photo01,.photo02,.photo03,.photo04{
+            margin-bottom:2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="photos clearfix">
+        <div class="img-box photo01"><img src="./images/plants-g822e405cc_1280.jpg" alt="이미지1"></div>
+        <div class="img-box photo02"><img src="./images/plants-g822e405cc_1280.jpg" alt="이미지2"></div>
+        <div class="img-box photo03"><img src="./images/plants-g822e405cc_1280.jpg" alt="이미지3"></div>
+        <div class="img-box photo04"><img src="./images/plants-g822e405cc_1280.jpg" alt="이미지4"></div>
+        <div class="img-box photo05"><img src="./images/plants-g822e405cc_1280.jpg" alt="이미지5"></div>
+        <div class="img-box photo06"><img src="./images/plants-g822e405cc_1280.jpg" alt="이미지6"></div>
+        <div class="img-box photo07"><img src="./images/plants-g822e405cc_1280.jpg" alt="이미지7"></div>
+        <div class="img-box photo08"><img src="./images/plants-g822e405cc_1280.jpg" alt="이미지8"></div>
+    </div>
+</body>
+</html>

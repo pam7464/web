@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+       header{
+            height:100px;
+       }
+       .sec01{
+           padding:100px 0;
+       }
+       .sec02,.sec03,.sec04{
+           height:400px;
+       }
+        section:nth-of-type(1){
+            background-color:red;
+            position:sticky;
+            position:-webkit-sticky;
+            top:50px;           
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>header</header>
+        <section class="sec sec01">01</section>
+        <section class="sec sec02">02</section>
+        <section class="sec sec03">03</section>
+        <section class="sec sec04">04</section>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

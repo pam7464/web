@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .wrap{
+            width:100vw;
+            overflow:hidden;
+        }
+        .container{
+            /* width:100%; */
+            max-width:1200px;
+            margin:0 auto;
+        }
+        header{            
+            background-color:rgba(255,0,0,0.2);
+        }
+        header .container{
+            max-width:100%;
+            padding:30px 0;
+            background-color:rgba(255,0,0,0.2);
+            text-align:center;
+        }
+        .banner{
+            background-color:rgba(0,255,0,0.2);
+        }
+        .banner .container{            
+            padding:100px 0;
+            background-color:rgba(0,255,0,0.2);
+            text-align:center;
+        }
+        .main{
+            background-color:rgba(0,0,255,0.2);
+        }
+        .main .container{
+            height:600px;
+            background-color:rgba(0,0,255,0.2);
+            text-align:center;
+            line-height:600px;
+        }
+        footer{
+            background-color:rgba(255,255,0,0.2);
+        }
+        footer .container{
+            max-width:100%;
+            padding:20px 0;
+            background-color:rgba(255,255,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header>
+            <div class="container">
+                header
+            </div>
+        </header>
+        <section class="section sec01 banner">
+            <div class="container">
+                banner
+            </div>            
+        </section>
+        <section class="section sec02 main">
+            <div class="container">
+                main
+            </div>            
+        </section>
+        <footer>
+            <div class="container">
+                footer
+            </div>            
+        </footer>
+
+    </section>
+</body>
+</html>

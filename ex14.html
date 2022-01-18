@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        .box{
+            position:fixed;
+            left:0;
+            top:0;
+            width:10px;
+            height:10px;
+            border-radius:50px;
+            background-image:url('/images/plants-g822e405cc_1280.jpg');
+            background-attachment:fixed;
+            transition:width 0.1s,height 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        let mouseCircle = document.querySelector('.box');
+
+        document.addEventListener('mousemove',function(e){
+            let mouseX = e.clientX;
+            let mouseY = e.clientY;
+            console.log('마우스X 좌표 : ' + mouseX);
+            console.log('마우스y 좌표 : ' + mouseY);
+            mouseCircle.style.width = '100px';
+            mouseCircle.style.height = '100px';
+            mouseCircle.style.left = (mouseX - 50) + 'px';
+            mouseCircle.style.top = (mouseY - 50) + 'px';
+        })
+    </script>
+</body>
+</html>
