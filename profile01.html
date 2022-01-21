@@ -14,6 +14,12 @@
         a{text-decoration:none;color:inherit;}
         h1,h2,h3,h4,h5,h6{font-weight:400;font-size:1em;}
 
+        :root{
+            font-family:'Orbitron',sans-serif;
+            font-weight:400;
+            font-size:16px;
+            color:#666;
+        }
         body{
             background-color:#cfe7e7;;
         }
@@ -33,12 +39,54 @@
         }
         .header a{
             font-size:1.6em;
-            color:#666;
+        }
+        .profile{
+            margin-bottom:60px;
         }
         .profile .img-profile{
-            width:69.76744186046512%;
+            width:69.76744186046512%;            
+            margin:0 auto 20px;    
             border-radius:50%;
-            overflow:hidden;
+            box-shadow:10px 10px 30px 0 rgba(0,0,0,0.5);
+            overflow:hidden;           
+        }
+        h1{
+            font-family:sans-serif;
+            text-transform: uppercase;
+            font-weight:700;
+            font-size:2.5em;
+            color:#555;
+            text-align:center;
+        }
+        h2{
+            margin-bottom:60px;
+            font-family:sans-serif;
+            text-transform: uppercase;
+            font-weight:700;   
+            font-size:1.2em;
+            color:#bbb; 
+            text-align:center;         
+        }
+        .btn-view{
+            width:62.7906976744186%;            
+            margin:0 auto;
+            border:none;
+            padding:16px 0;
+            border-radius:24px;
+            background-color:#41f1fc;
+            box-shadow: 5px 20px 30px 0 rgba(65, 241, 252,0.5);
+            font-weight:700;
+            font-size:0.8em;
+            color:#fff;
+            text-align:center;
+            text-transform:uppercase;
+        }
+        .contact li{
+            padding:20px;
+            font-size:1.2em;
+        }
+        .contact li.facebook{
+            border-bottom:1px solid #ddd;
         }
     </style>
 </head>
@@ -62,9 +110,20 @@
                 </a>                
             </h1>
             <h2>ui/ux interactive developer</h2>
-            <button type="button">view more</button>
+            <div class="btn-view">view more</div>
         </section>
-        <section class="sec contact">CONTACT</section>
+        <section class="sec contact">
+            <ul>
+                <li class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <a href="#">visit my facebook page.</a>
+                </li>
+                <li class="email">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:pam7461@naver.com">pam7461@naver.com</a>
+                </li>
+            </ul>
+        </section>
         <footer class="footer">FOOTER</footer>
     </section>
 </body>
