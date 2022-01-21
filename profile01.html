@@ -47,9 +47,10 @@
             width:69.76744186046512%;            
             margin:0 auto 20px;    
             border-radius:50%;
-            box-shadow:10px 10px 30px 0 rgba(0,0,0,0.5);
+            box-shadow:10px 10px 30px 0 rgba(53, 224, 247, 0.5);
             overflow:hidden;           
         }
+        
         h1{
             font-family:sans-serif;
             text-transform: uppercase;
@@ -73,25 +74,99 @@
             border:none;
             padding:16px 0;
             border-radius:24px;
-            background-color:#41f1fc;
-            box-shadow: 5px 20px 30px 0 rgba(65, 241, 252,0.5);
+            background-color:#35e0f7;
+            box-shadow: 5px 20px 30px 0 rgba(53, 224, 247, 0.5);
             font-weight:700;
             font-size:0.8em;
             color:#fff;
             text-align:center;
             text-transform:uppercase;
         }
+        .contact{
+            margin-bottom:40px;
+        }
         .contact li{
             padding:20px;
             font-size:1.2em;
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:space-between;
         }
+        .contact li i{
+            flex:1;
+        }
+        .contact li a{
+            flex:4;
+        }
+        .contact li::after{
+            content:'';
+            display:block;
+            flex:1;
+        }
+
         .contact li.facebook{
             border-bottom:1px solid #ddd;
+        }
+        
+        .footer ul{
+            display: flex;
+            flex-flow:row nowrap;
+            justify-content:space-evenly;
+            
+        }
+        .footer ul li{
+            width:45px;
+            height:45px;
+            border-radius:50%;
+            background-color:#35e0f7;
+            box-shadow:5px 5px 5px rgba(53, 224, 247, 0.5);
+            text-indent:-999999px;
+        }
+        .footer ul li:nth-child(2){
+            background-color:#c9f6eb;
+            box-shadow:5px 5px 5px rgba(201, 246, 235, 0.5);
+        }
+        .footer ul li:nth-child(3){
+            background-color:#f3cfea;
+            box-shadow:5px 5px 5px rgba(243, 207, 234, 0.5);
+        }
+        .footer ul li:nth-child(4){
+            background-color:#dad5f2;
+            box-shadow:5px 5px 5px rgba(218, 213, 242, 0.5);
+        }
+        
+        .wrap.theme01 .img-profile{
+            box-shadow:5px 5px 5px rgba(53, 224, 247, 0.5);
+        }
+        .wrap.theme01 .btn-view{
+            background-color:#35e0f7;
+            box-shadow: 5px 20px 30px 0 rgba(53, 224, 247, 0.5); 
+        }
+        .wrap.theme02 .img-profile{
+            box-shadow:5px 5px 5px rgba(201, 246, 235, 0.5);
+        }
+        .wrap.theme02 .btn-view{
+            background-color:#c9f6eb;
+            box-shadow:5px 5px 5px rgba(201, 246, 235, 0.5);
+        }
+        .wrap.theme03 .img-profile{
+            box-shadow:5px 5px 5px rgba(243, 207, 234, 0.5);
+        }
+        .wrap.theme03 .btn-view{
+             background-color:#f3cfea;
+            box-shadow:5px 5px 5px rgba(243, 207, 234, 0.5);
+        }
+        .wrap.theme04 .img-profile{
+            box-shadow:5px 5px 5px rgba(218, 213, 242, 0.5);
+        }
+        .wrap.theme04 .btn-view{
+            background-color:#dad5f2;
+            box-shadow:5px 5px 5px rgba(218, 213, 242, 0.5);
         }
     </style>
 </head>
 <body>
-    <section class="wrap">
+    <section class="wrap theme01">
         <header class="header">
             <nav>
                 <ul>
@@ -124,7 +199,27 @@
                 </li>
             </ul>
         </section>
-        <footer class="footer">FOOTER</footer>
+        <footer class="footer">
+            <ul>
+                <li id="theme01">1</li>
+                <li id="theme02">2</li>
+                <li id="theme03">3</li>
+                <li id="theme04">4</li>
+            </ul>
+        </footer>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('#theme01').on({
+            'click':function(){
+                $('.wrap').removeClass('theme02');
+                $('.wrap').removeClass('theme03');
+                $('.wrap').removeClass('theme04');
+                $('.wrap').addClass('theme01');
+            }
+        });
+        
+    </script>
 </body>
 </html>
