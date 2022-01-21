@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing:border-box;}
+        .square{
+            width:100px;
+            height:100px;
+            border:50px solid red;
+            border-top-color:green;
+            border-right-color:blue;
+            border-bottom-color:cyan;        
+        }
+        .tri-top{
+            width:100px;
+            height:100px;
+            border-bottom:100px solid red;
+            border-top:0;
+            border-right:50px solid transparent;
+            border-left:50px solid transparent;
+        }
+        .tri-left{
+            width:100px;
+            height:100px;
+            border-right:100px solid blue;
+            border-top:50px solid transparent;
+            border-bottom:50px solid transparent;
+        }
+        .tri-left-top{
+            width:100px;
+            height:100px;
+            border:50px solid red;           
+            border-right-color:transparent;
+            border-bottom-color:transparent;
+        }
+        .point6-star{
+            width:100px;
+            height:100px;
+            border-bottom:100px solid green;
+            border-top:0;
+            border-right:50px solid transparent;
+            border-left:50px solid transparent;
+            position:relative;
+        }
+        .point6-star::before{
+            position:absolute;
+            left:0;
+            top:0;
+            transform:translate(-50%,30%) rotate(180deg);
+
+            box-sizing:border-box;
+            content:'';
+            display:block;
+            width:100px;
+            height:100px;
+            border-bottom:100px solid green;
+            border-top:0;
+            border-right:50px solid transparent;
+            border-left:50px solid transparent;
+        }
+
+        .dot-image{
+            width:10px;
+            height:10px;
+            margin:100px 0 0 200px;
+            background-color:#fff;            
+            box-shadow:
+            10px 0 0 0 red,
+            20px 0 0 0 red,
+            30px 0 0 0 red,
+            50px 0 0 0 red,
+            60px 0 0 0 red,
+            -10px 0 0 0 red,
+            -20px 0 0 0 red,
+            -10px -10px 0 0 red,
+            0 -10px 0 0 red,
+            10px -10px 0 0 red,
+            20px -10px 0 0 red,
+            30px -10px 0 0 red,
+            40px -10px 0 0 red,
+            50px -10px 0 0 red,
+
+            0 -20px 0 0 red,
+            -10px -30px 0 0 red,
+            40px -20px 0 0 red,
+            50px -30px 0 0 red,
+
+            -30px 10px 0 0 red,
+            -20px 10px 0 0 red,
+            -10px 10px 0 0 red,
+            0px 10px 0 0 red,
+            10px 10px 0 0 red,
+            20px 10px 0 0 red,
+            30px 10px 0 0 red,
+            40px 10px 0 0 red,
+            50px 10px 0 0 red,
+            60px 10px 0 0 red,
+            70px 10px 0 0 red,
+            
+            -30px 20px 0 0 red,
+            -10px 20px 0 0 red,
+            0px 20px 0 0 red,
+            10px 20px 0 0 red,
+            20px 20px 0 0 red,
+            30px 20px 0 0 red,
+            40px 20px 0 0 red,
+            50px 20px 0 0 red,
+            70px 20px 0 0 red,
+
+            -30px 30px 0 0 red,
+            -10px 30px 0 0 red,            
+            50px 30px 0 0 red,
+            70px 30px 0 0 red,
+
+            0px 40px 0 0 red,
+            10px 40px 0 0 red,
+            30px 40px 0 0 red,
+            40px 40px 0 0 red;          
+            transition:0.5s;
+        }
+        .parbox{
+            display:inline-block;
+            width:auto;
+        }
+        .parbox:hover .dot-image{
+            transform:perspective(400px) rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="square"></div>
+    <div class="tri-top"></div>
+    <div class="tri-left"></div>
+    <div class="tri-left-top"></div>
+    <div class="point6-star"></div> -->
+    <div class="parbox">
+        <div class="dot-image">
+
+        </div>
+    </div>
+</body>
+</html>

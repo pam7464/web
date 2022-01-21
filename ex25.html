@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;}
+        .wrap{
+            width:100%;
+            max-width:768px;
+            margin:0 auto;            
+        }
+        .header{
+            padding:16px;
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .main{
+            display:flex;
+            flex-flow:row wrap;
+        }
+        .main>div{
+            width:100%;
+            padding:50px 0;
+            transition:0.3s;
+        }
+        .main-top{
+            background-color:red;
+        }
+        .main-middle{
+            background-color:green;
+        }
+        .main-bottom{
+            background-color:blue;
+        }
+
+
+        @media (min-width:640px){
+           .main{
+               flex-flow:row nowrap;
+           }
+            .main>div{
+                width:33.3333%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="h-left">
+                <span><i class="fas fa-bars"></i></span>
+                <span><i class="fas fa-search"></i></span>
+            </div>
+            <div class="h-center">
+                <h1>Profile</h1>
+            </div>
+            <div class="h-right">
+                <span><i class="fas fa-user"></i></span>
+                <span><i class="fab fa-telegram-plane"></i></span>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-top">
+                원
+            </div>
+            <div class="main-middle">
+                제목
+            </div>
+            <div class="main-bottom">
+                내용
+            </div>
+        </div>
+        <div class="footer">
+            바닥글
+        </div>
+    </div>
+</body>
+</html>

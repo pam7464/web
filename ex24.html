@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        .wrap{
+            width:100%;
+            max-width:1280px;
+            margin:0 auto;
+            overflow:hidden;
+        }
+        .box{
+            width:100%;
+            height:500px;
+            border:10px solid black;
+            padding:20px;            
+            background-color:red;
+            /* 플렉스 컨테이너 */
+            display:flex;
+            /* 플렉스 컨테이너 주축 방향 */            
+            flex-direction:row-reverse;
+            flex-direction:column;
+            flex-direction:column-reverse;
+            flex-direction:row;
+
+            /*플렉스 컨테이너 보조축 방향 사용유무*/
+            flex-wrap:nowrap;/*보조축 사용안함*/
+            flex-wrap:wrap;/*보조축 사용함*/
+
+            /* flex-direction + flex-wrap */            
+            flex-flow:row nowrap;
+            flex-flow:column wrap;
+            flex-flow:column nowrap;
+            flex-flow:row wrap;
+
+            /*아이템 주축 맞춤*/
+            justify-content:flex-start;
+            justify-content:center;
+            justify-content:flex-end;            
+            justify-content:space-around;
+            justify-content:space-evenly;
+            justify-content:space-between;
+
+            /*flex-wrap:nowrap때 보조축 맞춤*/
+            align-items:flex-start;
+            align-items:center;
+            align-items:flex-end;
+            align-items:stretch;
+
+            /*flex-wrap:wrap때 보조축 맞춤*/
+            align-content: space-around;
+            align-content: space-between;
+            align-content:flex-start;
+        }
+
+        .child-box{ 
+            width:290px; 
+            height:50px; 
+        }
+        .child01{
+            background-color:green;            
+        }
+        .child02{
+            background-color:blue;            
+        }
+        .child03{
+            background-color:cyan;            
+        }
+        .child04{
+            background-color:magenta;            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div class="child-box child01"></div>
+            <div class="child-box child02"></div>
+            <div class="child-box child03"></div>
+            <div class="child-box child04"></div>
+        </div>
+    </div>
+</body>
+</html>

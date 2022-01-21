@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+        *{box-sizing:border-box;margin:0;padding:0;}
+        img{width:100%;vertical-align:top;}
+        ul,ol,li{list-style:none;}
+        a{text-decoration:none;color:inherit;}
+        h1,h2,h3,h4,h5,h6{font-weight:400;font-size:1em;}
+
+        body{
+            background-color:#cfe7e7;;
+        }
+        .wrap{
+            max-width:520px;
+            margin:72px auto;
+            padding:50px 45px;
+            border-radius:8px;
+            background-color:#fff;
+            box-shadow:10px 10px 30px 0 rgba(0,0,0,0.1);
+        }
+
+        .header ul{
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:space-between;
+        }
+        .header a{
+            font-size:1.6em;
+            color:#666;
+        }
+        .profile .img-profile{
+            width:69.76744186046512%;
+            border-radius:50%;
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <nav>
+                <ul>
+                    <li class="btn-nav"><a href="#"><i class="fas fa-bars"></i></a></li>
+                    <li class="btn-new"><a href="#"><i class="far fa-sticky-note"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="sec profile">
+            <div class="img-box img-profile">
+                <img src="./images/plants-g822e405cc_1280.jpg" alt="프로필 이미지">
+            </div>
+            <h1>
+                <a href="profile01.html">
+                    dcodelab
+                </a>                
+            </h1>
+            <h2>ui/ux interactive developer</h2>
+            <button type="button">view more</button>
+        </section>
+        <section class="sec contact">CONTACT</section>
+        <footer class="footer">FOOTER</footer>
+    </section>
+</body>
+</html>
